@@ -50,8 +50,8 @@ double SlSum(double* ArrTel, int N) {
 
 double Sin(double (*ResFunc)(double*, int), int N, double x) {
     x = fmod(x, 2 * M_PI);
-    if (x > 2 * M_PI) x = x - 2 * M_PI;
-    if (x < -2 * M_PI) x = x + 2 * M_PI;
+    if (x > M_PI) x = x - 2 * M_PI;
+    if (x < -M_PI) x = x + 2 * M_PI;
     double res = 0, ElTel = x, k;
     double* ArrTel = malloc(N * sizeof(double));
     if (ArrTel) {
@@ -69,8 +69,8 @@ double Sin(double (*ResFunc)(double*, int), int N, double x) {
 
 double Cos(double (*ResFunc)(double*, int), int N, double x) {
     x = fmod(x, 2 * M_PI);
-    if (x > 2 * M_PI) x = x - 2 * M_PI;
-    if (x < -2 * M_PI) x = x + 2 * M_PI;
+    if (x > M_PI) x = x - 2 * M_PI;
+    if (x < -M_PI) x = x + 2 * M_PI;
     double ElTel = 1, k, res = 0;
     double* ArrTel = malloc(N * sizeof(double));
     if (ArrTel) {
